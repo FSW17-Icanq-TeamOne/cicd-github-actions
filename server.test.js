@@ -24,6 +24,14 @@ it('Call the /miah endpoint', async done => {
     done()
 })
 
+
+it('Call the /wisnu endpoint', async done => {
+    const res = await request.get('/wisnu')
+    expect(res.status).toBe(200)
+    expect(res.text).toBe('wisnu!')
+    done()
+})
+
 it('Call the /adam endpoint', async done => {
     const res = await request.get('/adam')
     expect(res.status).toBe(200)
