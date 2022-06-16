@@ -11,4 +11,8 @@ app.get('/adam', (req,res) => res.send('adam!'))
 app.get('/hello/:name', (req,res) => {
     res.json({message:greeting(req.params.name)})
 })
+
+app.get('/boom', (req, res) => {
+    res.json({ message: 'kaboom' })
+})
 module.exports = app
