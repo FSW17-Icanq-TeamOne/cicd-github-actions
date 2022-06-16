@@ -17,6 +17,13 @@ it('Call the /jere endpoint', async done => {
     done()
 })
 
+it('Call the /miah endpoint', async done => {
+    const res = await request.get('/miah')
+    expect(res.status).toBe(200)
+    expect(res.text).toBe('miah!')
+    done()
+})
+
 it('Call the / endpoint', async done => {
     const res = await request.get('/')
     expect(res.status).toBe(200)
